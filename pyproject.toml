@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cuneuralfoil"
+version = "0.0.1"
+description = "CUDA-accelerated NeuralFoil wrappers (PyTorch-based) for fast airfoil evaluation and differentiation."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Zhen Wei", email = "zhen.wei@hotmail.com" },
+]
+keywords = ["aerodynamics", "airfoil", "neuralfoil", "pytorch", "CFD", "surrogate model"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "numpy",
+  "torch",
+  "neuralfoil",
+  "aerosandbox",
+  "matplotlib"
+]
+
+[project.urls]
+Homepage = "https://github.com/kfxw/cuNeuralFoil"
+Repository = "https://github.com/kfxw/cuNeuralFoil"
