@@ -192,7 +192,7 @@ This makes cuNeuralFoil suitable for gradient-based inverse design, optimization
 ## 3. Consistency with NeuralFoil
 cuNeuralFoil is designed to be numerically consistent with the original NeuralFoil implementation.
 
-We validate:
+```test.py``` validates:
 
  - Scalars: CL, CD, CM, transition locations (Top_Xtr, Bot_Xtr), etc.
 
@@ -202,7 +202,7 @@ We validate:
  
 ![Gradient comparison](cuneuralfoil/test_gradients.png)
  
- You can run ```test.py``` to get more results.
+ You may run ```test.py``` to get more results.
  
  ## 4. Computational Efficiency & Speedup
  
@@ -212,13 +212,13 @@ cuNeuralFoil exploits GPU parallelism and batched evaluation to accelerate:
 
  - Differentiation (via torch.autograd) for large batches of airfoils or operating points
  
- We benchmark multiple NeuralFoil model sizes also in ```test.py```:
+ Multiple NeuralFoil model sizes have been benchmarked, also see ```test.py```:
  
  ``` 
  ["xxsmall", "small", "medium", "large", "xlarge", "xxxlarge"]
  ```
  
- For each model, we measure:
+ For each model, ```test,py``` measure:
  
   - ```time_nf_forward```: original NeuralFoil forward time (CPU)
   
